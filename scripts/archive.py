@@ -24,9 +24,9 @@ def main():
     os.chdir(os.path.join(os.path.dirname(__file__), os.pardir, 'skia'))
 
     globs = [
-        'out/' + build_type + '-' + machine + '/*.a',
-        'out/' + build_type + '-' + machine + '/*.lib',
-        'out/' + build_type + '-' + machine + '/icudtl.dat',
+        'out/Release/*.a',
+        'out/Release/*.lib',
+        'out/Release/icudtl.dat',
         'third_party/externals/angle2/LICENSE',
         'third_party/externals/freetype/docs/FTL.TXT',
         'third_party/externals/freetype/docs/GPLv2.TXT',

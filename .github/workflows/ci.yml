@@ -1,17 +1,17 @@
 name: CI
 
-on:
-  push:
-    branches: [ main ]
+#on:
+#  push:
+#    branches: [ main ]
 
-#
-# on:
-#   release:
-#     types: [created]
+
+on:
+  release:
+    types: [ created ]
 
 jobs:
-  build_wheels:
-    name: Build wheels on ${{ matrix.os }} (${{ matrix.arch }})
+  build_skia:
+    name: build skia on ${{ matrix.os }} (${{ matrix.arch }})
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -29,17 +29,13 @@ jobs:
       - name: pip install
         run: python -m pip install --no-cache-dir --upgrade patch
 
-      - name: build skia
+      - name: build
         run: python scripts/build.py
 
-      - name: build skia
+      - name: archive
         run: python scripts/archive.py
 
       - uses: actions/upload-artifact@v2
         with:
           name: skia_windows_release_x64.zip
           path: '*.zip'
-#      - uses: actions/upload-artifact@v2
-#        with:
-#          path: ./build
-

@@ -35,7 +35,8 @@ jobs:
       - name: archive
         run: python scripts/archive.py
 
-      - uses: actions/upload-artifact@v2
+      - name: release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          name: skia_windows_release_x64.zip
-          path: '*.zip'
+          files: *.zip

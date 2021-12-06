@@ -26,6 +26,7 @@ def main():
     globs = [
         'out/Release/*.a',
         'out/Release/*.lib',
+        'out\Release\gen\skia.h',
         'out/Release/icudtl.dat',
         'include/**/*',
         'modules/particles/include/*.h',
@@ -43,6 +44,7 @@ def main():
         'modules/skshaper/include/*.h',
         'modules/skshaper/src/*.h',
         'modules/svg/include/*.h',
+        'experimental/svg/model/*.h',
         'src/core/*.h',
         'src/gpu/gl/*.h',
         'src/utils/*.h',

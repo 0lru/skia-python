@@ -26,7 +26,9 @@ def main():
     globs = [
         'out/Release/*.a',
         'out/Release/*.lib',
-        'out\Release\gen\skia.h',
+        'out/Release/obj/experimental/svg/model/*.obj',
+        'out/Release/obj/experimental/svg/model/*.o',
+        'out/Release/gen/skia.h',
         'out/Release/icudtl.dat',
         'include/**/*',
         'modules/particles/include/*.h',

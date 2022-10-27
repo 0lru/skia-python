@@ -31,6 +31,7 @@ def main():
         'out/Release/gen/skia.h',
         'out/Release/icudtl.dat',
         'include/**/*',
+        'modules/skcms/*.h',
         'modules/particles/include/*.h',
         'modules/skottie/include/*.h',
         'modules/skottie/src/*.h',
